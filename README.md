@@ -10,3 +10,5 @@ Branches confuse the heck out of me, mostly because I haven't had a *real* reaso
 `$ git checkout -b samanthacsik/feature1`
 
 3. Sam and Brendan each create a file(s) on their local machines on their respective branches.
+
+..to be continued...
