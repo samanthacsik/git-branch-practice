@@ -1,14 +1,34 @@
 # A quick crash course in branching
 
-Branches confuse the heck out of me, mostly because I haven't had a *real* reason to use them. Brendan helped walk me through a practice session to start familiarizing myself with the general workflow. I'm documenting my notes here for future reference.
+Branches confuse the heck out of me, mostly because I haven't had a *real* reason to use them. B helped walk me through a practice session to start familiarizing myself with the general workflow. I'm documenting my notes here for future reference.
 
 ### Steps (at least the steps we took in this practice example):
 
 1. Sam created a GitHub Repository called [git-branch-practice](https://github.com/samanthacsik/git-branch-practice) and invited Brendan as a collaborator. Brendan cloned the repo to his computer.
 2. Sam & Brendan each create their own branches on their computers (**NOTE:** Brendan recommends naming branches using the following convention: `githubUserName/featureName`
 
-`$ git checkout -b samanthacsik/feature1`
+`$ git checkout -b samanthacsik/feature1` (**NOTE:** `git checkout` is used to change branches; the `-b` flag is used to create a new branch; when combined, it creates a new branch and moves to that new branch)
 
-3. Sam and Brendan each create a file(s) on their local machines on their respective branches.
+3. Sam and Brendan each create a file(s) on their local machines on their respective branches. Then stage, commit, push files *and* branches to the GitHub repo:
 
-..to be continued...
+* `git add file_name`  
+* `git commit -m "commit message"`
+* `git push -u origin samanthacsik/feature1` (**NOTE:** `-u` stands for *upstream*; git will prompt you to use these commands (rather than `git push`) because the branch you just created is not yet on the remote)
+
+4. Navigate back to the GitHub repo and click on "Pull requests." We chose to first address my (Sam's) PR first. Click on "Compare & pull request" for Sam's PR. This will open up an editor to add a description of your PR. Then click "Create pull request."
+
+* Navigate to "Insights" -> "Network" to explore a visualization of your branches/merges
+* Navigate to "Pull requests" -> "Files changed" to check out what changes have been done on this particular PR
+
+5. Click "Merge pull request"
+
+6. At this point, Sam's changes on her `samanthacsik/feature1` branch have been merged back into `main`. Brendan **does not** yet have these new changes to `main` on his branch, `brendanshanny/brendans-branch`. Brendan must take the following steps to get those changes onto his branch before merging into `main`.
+
+* `git checkotu main` (switches Brendan to his `main` branch)
+* `git pull` (pulls changes from the remote `main` to his local `main`)
+* `git checkout brendanshanny/brendans-feature` (switch back to his branch)
+* `git merge main` (merge changes on `main` into his branch; **NOTE:** `rebase` is a better alternate command to `merge` however we didn't cover this because I was getting confused (lol))
+* 
+
+
+
