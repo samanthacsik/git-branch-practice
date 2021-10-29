@@ -5,7 +5,7 @@ Branches confuse the heck out of me, mostly because I haven't had a *real* reaso
 ### Steps (at least the steps we took in this practice example):
 
 1. Sam created a GitHub Repository called [git-branch-practice](https://github.com/samanthacsik/git-branch-practice) and invited Brendan as a collaborator. Brendan cloned the repo to his computer.
-2. Sam & Brendan each create their own branches on their computers (**NOTE:** Brendan recommends naming branches using the following convention: `githubUserName/featureName`
+2. Sam & Brendan each create their own branches on their computers (**NOTE:** Brendan recommends naming branches using the following convention: `githubUserName/featureName`)
 
 `$ git checkout -b samanthacsik/feature1` (**NOTE:** `git checkout` is used to change branches; the `-b` flag is used to create a new branch; when combined, it creates a new branch and moves to that new branch)
 
